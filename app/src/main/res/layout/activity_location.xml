@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="368dp"
+        android:layout_height="189dp"
+
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="72dp"
+        android:includeFontPadding="true"
+        android:text="아직 수신되지 않았음"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#585B8F"
+
+        android:onClick="cilckout"
+        android:text="나가기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status"
+        app:layout_constraintVertical_bias="0.952"></Button>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="332dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/purple_500"
+        android:text="사용자 현재 위치"
+        app:layout_constraintBottom_toTopOf="@+id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
