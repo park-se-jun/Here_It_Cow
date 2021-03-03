@@ -8,16 +8,30 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="412dp"
         android:layout_marginStart="74dp"
         android:layout_marginLeft="74dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="279dp"
         android:layout_marginRight="279dp"
-        android:text="빗길운전 안전수칙!"
+        android:text="1. 전조등과 안개등 켜기\n2. 안전거리 확보하기 \n3. 브레이크는 짧게 나눠서 밞기\n4. 와이퍼 수시로 점검하기\n5. 감속 운전하기 "
+        android:textSize="11pt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="374dp"
+        android:layout_height="52dp"
+        android:text="빗길운전 안전수칙!!!"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

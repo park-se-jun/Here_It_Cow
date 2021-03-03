@@ -72,6 +72,10 @@
         "source": "C:\\Users\\gks54\\AndroidStudioProjects\\Here_It_Cow\\app\\src\\main\\res\\layout\\frag_night.xml"
     },
     {
+        "merged": "C:\\Users\\gks54\\AndroidStudioProjects\\Here_It_Cow\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_resister2.xml.flat",
+        "source": "C:\\Users\\gks54\\AndroidStudioProjects\\Here_It_Cow\\app\\src\\main\\res\\layout\\activity_resister2.xml"
+    },
+    {
         "merged": "C:\\Users\\gks54\\AndroidStudioProjects\\Here_It_Cow\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
         "source": "C:\\Users\\gks54\\AndroidStudioProjects\\Here_It_Cow\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },

@@ -8,16 +8,30 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="412dp"
         android:layout_marginStart="74dp"
         android:layout_marginLeft="74dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="279dp"
         android:layout_marginRight="279dp"
-        android:text="눈길운전 안전수칙!"
+        android:text="1. 타이어 마모도 체크\n2. 차에 쌓인 눈 제거 \n3. 스노우 체인 등 비상장비 적재\n4. 기어모드는 오토홀드, 스노우 모드, 에코 모드에 넣고 운행한다\n5. 서행 및 안전거리 확보 \n6. 앞차 바퀴자국 따라가기 \n7. 미끄러지는 방향으로 핸들 조작하기 \n8. 대중교통 이용하기 "
+        android:textSize="11pt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="374dp"
+        android:layout_height="52dp"
+        android:text="눈길운전 안전수칙!!!"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
