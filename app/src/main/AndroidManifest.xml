@@ -12,6 +12,7 @@
         android:theme="@style/Theme.Example2.NoActionBar">
         <activity android:name=".ResisterActivity"></activity>
         <activity android:name=".LoginActivity" />
+        <activity android:name=".ResisterActivity2" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

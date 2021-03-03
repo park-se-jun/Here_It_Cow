@@ -22,6 +22,7 @@
         android:theme="@style/Theme.Example2.NoActionBar" >
         <activity android:name="org.techtown.example2.ResisterActivity" />
         <activity android:name="org.techtown.example2.LoginActivity" />
+        <activity android:name="org.techtown.example2.ResisterActivity2" />
         <activity android:name="org.techtown.example2.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
