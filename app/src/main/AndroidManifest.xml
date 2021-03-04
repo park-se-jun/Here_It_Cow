@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.techtown.example2">
-
+<!--요청 권한-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
 
     <application
         android:allowBackup="true"
@@ -11,10 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Example2.NoActionBar">
+        <activity android:name=".PermissionActivity"></activity>
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.Example2.NoActionBar.NoActionBar"></activity>
+            android:theme="@style/Theme.Example2.NoActionBar.NoActionBar" />
         <activity android:name=".ResisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".ResisterActivity2" />
