@@ -15,9 +15,11 @@
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.Example2.NoActionBar.NoActionBar"></activity>
-        <activity android:name=".ResisterActivity" />
+
         <activity android:name=".LoginActivity" />
+        <activity android:name=".ResisterActivity" />
         <activity android:name=".ResisterActivity2" />
+        <activity android:name=".ResisterActivity3" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
