@@ -68,7 +68,7 @@ public class ResisterActivity3 extends AppCompatActivity {
         finish();
     }
     public void onNext(View v){
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
         finish();
     }
