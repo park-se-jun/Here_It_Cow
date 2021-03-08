@@ -5,16 +5,28 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Calendar;
+import java.util.HashMap;
 
-public class ResisterActivity3 extends AppCompatActivity {
+public class ResisterActivity3 extends AppCompatActivity implements VariableInterface{
     EditText btnSelectDate, btnSelectCar;
 
 
@@ -22,6 +34,12 @@ public class ResisterActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resister3);
+
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
         btnSelectDate=(EditText)findViewById(R.id.Birthday);
         btnSelectCar=(EditText)findViewById(R.id.carselect);
     }
@@ -68,9 +86,46 @@ public class ResisterActivity3 extends AppCompatActivity {
         finish();
     }
     public void onNext(View v){
+
+        EditText name = (EditText) findViewById(R.id.Name);
+        EditText birth = (EditText) findViewById(R.id.Birthday);
+        EditText carselect = (EditText) findViewById(R.id.carselect);
+        EditText carnum = (EditText) findViewById(R.id.Carnumber);
+
+
+        RegInfo.add(name.getText().toString());
+        RegInfo.add(birth.getText().toString());
+        RegInfo.add(carselect.getText().toString());
+        RegInfo.add(carnum.getText().toString());
+
+        onJoin();
+
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void onJoin(){
+
+        String url = "http://10.21.20.95:4000/join";
+        HashMap<String, String> map = new HashMap<>();
+
+        map.put("ID",RegInfo.get(0));
+        map.put("password",RegInfo.get(1));
+        map.put("PhoneNum",RegInfo.get(2));
+        map.put("Name",RegInfo.get(3));
+        map.put("Birth",RegInfo.get(4));
+        map.put("CarKind",RegInfo.get(5));
+        map.put("CarNum",RegInfo.get(6));
+
+        String result = HttpRequest.postRequest(url,map);
+
+        if(statusCode.get(0) == 200){
+            Toast toast=Toast.makeText(ResisterActivity3.this,"회원가입이 완료되었습니다.",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
+        RegInfo.clear();
     }
 
 }
