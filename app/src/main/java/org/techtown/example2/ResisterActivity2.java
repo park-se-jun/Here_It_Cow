@@ -52,7 +52,7 @@ public class ResisterActivity2 extends AppCompatActivity implements VariableInte
 
     public void sendAuth(){
 
-        String url = "http://10.21.20.95:4000/join/send";
+        String url = "http://140.238.26.22/join/send";
         HashMap<String, String> map = new HashMap<>();
 
         user_auth_number = numberGen(4,1); // 4자리 중복 허용

@@ -16,7 +16,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 
-public class HttpRequest implements VariableInterface {
+public class  HttpRequest implements VariableInterface {
 
     public static String postRequest(String pURL, HashMap<String, String> pList){
 

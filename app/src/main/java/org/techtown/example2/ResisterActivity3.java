@@ -100,14 +100,14 @@ public class ResisterActivity3 extends AppCompatActivity implements VariableInte
 
         onJoin();
 
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,HomeActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void onJoin(){
 
-        String url = "http://10.21.20.95:4000/join";
+        String url = "http://140.238.26.22/join";
         HashMap<String, String> map = new HashMap<>();
 
         map.put("ID",RegInfo.get(0));

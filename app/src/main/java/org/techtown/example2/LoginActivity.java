@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity implements VariableInterfac
     {
         Intent intent = new Intent(this, ResisterActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void onLogin(){
@@ -41,7 +42,7 @@ public class LoginActivity extends AppCompatActivity implements VariableInterfac
 
         // 추가 사항 -> id 나 pwd가 공백일시 toast 메시지 출력
 
-        String url = "http://10.21.20.95:4000/login";
+        String url = "http://140.238.26.22/login";
         HashMap<String, String> map = new HashMap<>();
 
         map.put("ID",ID);
